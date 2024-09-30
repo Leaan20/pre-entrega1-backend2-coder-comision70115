@@ -1,0 +1,20 @@
+{{!-- formulario de logueado de usuarios --}}
+<h1>Login</h1>
+<div class="formContainer">
+    <form class="productForm" action="/api/sessions/login" method="post">
+    <h3>Ingrese a su cuenta</h3>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="text" name="password">
+        </div>
+
+        <div class="sendInfo">
+            <button class="btn-form" type="submit">access</button>
+        </div>
+    </form>
+</div>
