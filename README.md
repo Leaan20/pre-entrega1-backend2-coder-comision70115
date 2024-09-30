@@ -5,3 +5,7 @@ Pre entrega 1 , curso backend2 Coderhouse
 Registro de usuarios
 Login de usuarios con autenticacion.
 Rutas protegidas para usuarios autenticados y autorizados.
+
+#### Ejemplo de usuario admin
+email : jp@gmail.com
+pass : jp123
