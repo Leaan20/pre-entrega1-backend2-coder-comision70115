@@ -120,23 +120,20 @@ viewsRouter.get("/carts/:cid", async (req, res) => {
 
 viewsRouter.get("/register", (req,res) => {
 
-
     try {
-
-        //verificamos si existe una sesion iniciado con el token, si es asi, enviamos a profile.
+        // Verificamos si ya hay un usuario autenticado.
         const token = req.cookies[secret_cookie];
         if (token) {
             const user = jwt.verify(token, private_key);
             if (user) {
                 return res.redirect("/profile");
             }
-
-        res.render("register");
         }
-
+        // Si no hay un usuario autenticado , mostramos el registro.
+        res.render("register");
     } catch (error) {
         console.log(error);
-        res.status(500).send("No es posible acceder a la pagina de registro , intente mas tarde");
+        res.status(500).send("No es posible acceder a la página de registro, intente más tarde.");
     }
 });
 
